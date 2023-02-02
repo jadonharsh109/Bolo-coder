@@ -203,7 +203,7 @@ svg {
 }
 .heading {
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   position: relative;
   font-family: "Teko", sans-serif;
 }
@@ -229,7 +229,7 @@ svg {
   font-family: "Bebas Neue", cursive;
   letter-spacing: 2px;
   position: relative;
-  top: -11rem;
+  top: -5rem;
 }
 .left,
 .right {
@@ -251,7 +251,7 @@ img {
 /* form css */
 .search-box {
   position: relative;
-  top: -8rem;
+  top: -1rem;
 }
 .search-box form {
   position: relative;
