@@ -74,6 +74,7 @@ body {
 .logo-link {
   text-decoration: none;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 .logo::after {
   content: "";
