@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo4.svg" type="image/svg" />
+    
+    <link rel="stylesheet" href="login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
+    <header>
+        <div class="nav-wrapper">
+          <div class="logo-container">
+            <h2 class="logo">
+              <a href="index.html" class="logo-link">
+                <span class="first">B</span>olo <span class="last">C</span>oders
+              </a>
+            </h2>
+          </div>
+          <nav>
+            <div class="nav-container">
+              <ul class="nav-tabs">
+                <li class="nav-tab">Ask</li>
+                <li class="nav-tab">Answer</li>
+                <li class="nav-tab">FAQ</li>
+                <li class="nav-tab">Contact</li>
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
 
+
+<br>
+      <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="txt" placeholder="User name" required="">
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
     
 </body>
 </html>
