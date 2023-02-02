@@ -88,6 +88,9 @@ a {
 .logo-link {
   text-decoration: none;
   color: white;
+  
+
+
 }
 .logo::after {
   content: "";
