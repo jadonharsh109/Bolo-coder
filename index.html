@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>bolo-Code</title>
   </head>
@@ -12,32 +18,31 @@
       <div class="nav-wrapper">
         <div class="logo-container">
           <h2 class="logo">
-            <span class="first">B</span>olo <span class="last">C</span>oders
+            <a href="index.html" class="logo-link">
+              <span class="first">B</span>olo <span class="last">C</span>oders
+            </a>
           </h2>
         </div>
         <nav>
-          <input class="hidden" type="checkbox" id="menuToggle" />
-          <label class="menu-btn" for="menuToggle">
-            <div class="menu"></div>
-            <div class="menu"></div>
-            <div class="menu"></div>
-          </label>
           <div class="nav-container">
             <ul class="nav-tabs">
-              <li class="nav-tab">Home</li>
+              
               <li class="nav-tab">Ask</li>
               <li class="nav-tab">Answer</li>
               <li class="nav-tab">FAQ</li>
               <li class="nav-tab">Contact</li>
-              <li class="nav-tab">Login</li>
+              <li  class="nav-tab"><a href="templates/login.html">Login</a></li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+
+    <div class="home"></div>
     <center>
-    <input class="search" type="text" required>
-  </center>
+      <input class="search" type="text" required />
+    </center>
+
     <script src="script.js"></script>
   </body>
 </html>
