@@ -11,7 +11,6 @@ body {
   width: 100vw;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
 }
 body {
   overflow-x: hidden;
@@ -37,6 +36,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
   background-color: #03001c;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Navbar Css */
