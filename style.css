@@ -88,9 +88,6 @@ a {
 .logo-link {
   text-decoration: none;
   color: white;
-  
-
-
 }
 .logo::after {
   content: "";
@@ -187,4 +184,150 @@ svg {
   display: block;
   background-color: #03001c;
   /* background-image: linear-gradient(to bottom, #03001c, #040f17); */
+}
+
+/* Home section */
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-top: 8rem;
+  padding: 0 10rem;
+  font-size: 2rem;
+}
+.question {
+  font-size: 9rem;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 5px;
+}
+.heading {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  font-family: "Teko", sans-serif;
+}
+.heading video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.heading .title {
+  width: 100%;
+  height: 100%;
+  background-color: #03001c;
+  font-size: 8rem;
+  color: white;
+  mix-blend-mode: darken;
+  text-align: center;
+}
+.home p {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+  position: relative;
+  top: -11rem;
+}
+.left,
+.right {
+  height: 60vh;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  flex-direction: column;
+  justify-content: start;
+}
+img {
+  width: 40rem;
+}
+
+/* form css */
+.search-box {
+  position: relative;
+  top: -8rem;
+}
+.search-box form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+.search-box form input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.search-box form .fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+.search-box form:hover,
+.search-box form:valid {
+  width: 40rem;
+  cursor: pointer;
+}
+
+.search-box form:hover input,
+.search-box form:valid input {
+  display: block;
+}
+
+.search-box form:hover .fa,
+.search-box form:valid .fa {
+  background: #07051a;
+  color: white;
+}
+
+.search-box form a {
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.search-box form:valid a {
+  display: block;
 }
