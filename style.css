@@ -192,7 +192,7 @@ svg {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
-  margin-top: 8rem;
+  margin-top: 6rem;
   padding: 0 10rem;
   font-size: 2rem;
 }
@@ -243,6 +243,26 @@ svg {
 .right {
   flex-direction: column;
   justify-content: start;
+}
+
+.left {
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 15px 0px rgba(0, 0, 0, 0);
+    transform: translateY(0px);
+  }
+  50% {
+    box-shadow: 0 25px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0);
+    transform: translateY(0px);
+  }
 }
 img {
   width: 40rem;
