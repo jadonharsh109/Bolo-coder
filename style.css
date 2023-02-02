@@ -216,16 +216,14 @@ body {
 }
 
 
-.home {
-  height: 300vh;
-}
+
 
 .search{
     height: 6vh;
     width: 80vh;
     border-radius: 5px;
     margin: 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 
 }
 
