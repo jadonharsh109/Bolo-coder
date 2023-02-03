@@ -1,6 +1,6 @@
 
 <?php
-require_once("form.php");
+require_once("conn.php");
 
 $username = $password = $email = $confirm_password = "";
 $username_err = $password_err = $email_err = $confirm_password_err = "";
