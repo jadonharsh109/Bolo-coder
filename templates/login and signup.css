@@ -8,8 +8,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 body {
 	height: 95vh;
 	width: 98%;
-	background-color: rgb(77, 4, 77); 
-	background: purple;
 	display: flex;
  	align-items: center;
  	justify-content: center;
@@ -18,7 +16,6 @@ body {
 html, body {margin: 0; height: 100%; overflow: hidden}
 .bdy{
 	height: 100vh;
-	background-color: rgb(77, 4, 77); 
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -184,7 +181,7 @@ input {
 .overlay {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to top, #2E3192 , #1BFFFF);
-	background: linear-gradient(to top, #2E3192 , #1BFFFF);
+	background: linear-gradient(175deg, rgba(2,0,36,1) 0%, rgba(48,30,103,1) 35%, rgba(48,30,103,1) 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -356,5 +353,5 @@ footer a {
 		margin-top: 12px;
 	}
 	body{
-		background-color: rgb(77, 4, 77); 
+		background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(3,0,28,1) 35%, rgba(48,30,103,1) 100%);
 	}
