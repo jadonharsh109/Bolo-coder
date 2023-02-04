@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   scrollbar-color: rgb(98 84 243);
   scrollbar-width: thin;
   color: white;
@@ -371,36 +371,63 @@ img {
   display: block;
 }
 
-/* Ask Page  */
-
-.ask-home {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  /* background-color: pink; */
-  gap: 2;
-  height: 70vh;
+/* Media Query for phone */
+@media (max-width: 480px) {
+  svg {
+    position: absolute;
+  }
+  .left {
+  }
+  .question {
+    font-size: 4rem;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 0;
+  }
+  .left,
+  .right {
+    height: 30vh;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    width: 30rem;
+  }
+  .heading .title {
+    width: 100%;
+    height: 100%;
+    background-color: #03001c;
+    font-size: 5rem;
+    color: white;
+    mix-blend-mode: darken;
+    text-align: center;
+    padding: 2rem;
+  }
+  .home p {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    top: 0px;
+  }
+  .heading video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    padding-top: 1rem;
+  }
+  .search-box {
+    position: relative;
+    top: 2rem;
+  }
 }
-
-.ask-container {
-  /* background-color: aquamarine; */
-  padding: 2rem 4rem;
-}
-
-.ask-container form {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 3fr;
-  grid-gap: 2rem;
-}
-
-.long-description {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  display: inherit;
-}
-
-/* Input css */
