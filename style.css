@@ -12,6 +12,7 @@ body {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
   scrollbar-color: rgb(98 84 243);
@@ -44,6 +45,7 @@ body {
 .center {
   text-align: center;
 }
+
 .white {
   color: white;
 }
@@ -79,15 +81,18 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .logo {
   transition: 0.5s;
   font-size: 2rem;
   cursor: pointer;
 }
+
 .logo-link {
   text-decoration: none;
   color: white;
 }
+
 .logo::after {
   content: "";
   height: 0.2rem;
@@ -98,6 +103,7 @@ a {
   left: 2.8rem;
   transition: 0.5s;
 }
+
 .logo:hover::after {
   width: 13rem;
 }
@@ -106,10 +112,12 @@ a {
   color: #764ba2;
   font-size: 2.8rem !important;
 }
+
 .logo .last {
   color: aquamarine;
   font-size: 2.8rem !important;
 }
+
 .nav-tabs {
   display: flex;
   font-weight: 600;
@@ -173,6 +181,7 @@ a {
   padding: 0;
   margin: 0;
 }
+
 svg {
   position: absolute;
   top: 8rem;
@@ -195,17 +204,20 @@ svg {
   padding: 0 10rem;
   font-size: 2rem;
 }
+
 .question {
   font-size: 9rem;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 5px;
 }
+
 .heading {
   width: 100%;
   height: 20vh;
   position: relative;
   font-family: "Teko", sans-serif;
 }
+
 .heading video {
   height: 100%;
   width: 100%;
@@ -224,12 +236,14 @@ svg {
   mix-blend-mode: darken;
   text-align: center;
 }
+
 .home p {
   font-family: "Bebas Neue", cursive;
   letter-spacing: 2px;
   position: relative;
   top: -5rem;
 }
+
 .left,
 .right {
   height: 60vh;
@@ -239,6 +253,7 @@ svg {
   align-items: center;
   justify-content: center;
 }
+
 .right {
   flex-direction: column;
   justify-content: start;
@@ -255,15 +270,18 @@ svg {
     box-shadow: 0 15px 0px rgba(0, 0, 0, 0);
     transform: translateY(0px);
   }
+
   50% {
     box-shadow: 0 25px 0px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
   }
+
   100% {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0);
     transform: translateY(0px);
   }
 }
+
 img {
   width: 40rem;
 }
@@ -273,6 +291,7 @@ img {
   position: relative;
   top: -1rem;
 }
+
 .search-box form {
   position: relative;
   top: 50%;
@@ -364,10 +383,12 @@ img {
   gap: 2;
   height: 70vh;
 }
+
 .ask-container {
   /* background-color: aquamarine; */
   padding: 2rem 4rem;
 }
+
 .ask-container form {
   display: grid;
   width: 100%;
@@ -375,6 +396,7 @@ img {
   grid-template-rows: 1fr 3fr;
   grid-gap: 2rem;
 }
+
 .long-description {
   grid-column-start: 1;
   grid-column-end: 3;
