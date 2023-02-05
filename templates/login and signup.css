@@ -65,8 +65,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #764ba2;
+	background-color: #764ba2;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -75,6 +75,9 @@ button {
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 }
+
+
+
 
 button:active {
 	transform: scale(0.95);
@@ -247,6 +250,10 @@ input {
 	color:grey;
 	font-size: 14px;
 }
+.social-container a:hover{
+	border: 3px solid #ff0000;
+	
+}
 
 footer {
     background-color: #222;
@@ -321,6 +328,7 @@ footer a {
 	padding: 10px 0;
 	width: 250px;
 	transition: border .5s;
+	font-family: fantasy;
 	}
 	
 	input:focus {
