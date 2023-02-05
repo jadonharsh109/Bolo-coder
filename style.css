@@ -430,4 +430,9 @@ img {
     position: relative;
     top: 2rem;
   }
+  .search-box form:hover,
+  .search-box form:valid {
+    width: 90vw;
+    cursor: pointer;
+  }
 }
