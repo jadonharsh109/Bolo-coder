@@ -376,7 +376,8 @@ img {
   svg {
     position: absolute;
   }
-  .left {
+  .logo {
+    transition: 0.7s;
   }
   .question {
     font-size: 4rem;
@@ -435,4 +436,32 @@ img {
     width: 90vw;
     cursor: pointer;
   }
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  #bar {
+    font-size: 3rem;
+    align-items: center;
+    display: flex !important;
+    justify-content: end;
+  }
+  .icons {
+    display: flex !important;
+    position: absolute;
+    font-size: 2.5rem;
+    width: 40vw;
+    justify-content: inherit;
+    transition: 0.7s;
+    margin-left: 1rem;
+    opacity: 0;
+  }
+}
+#bar {
+  display: none;
+}
+.icons {
+  display: none;
 }
