@@ -455,7 +455,7 @@ img {
     display: flex !important;
     position: absolute;
     font-size: 3rem;
-    width: 40vw;
+    width: 50vw;
     justify-content: inherit;
     transition: 0.7s;
     margin-left: 1rem;
