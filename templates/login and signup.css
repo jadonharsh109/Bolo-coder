@@ -93,7 +93,7 @@ button.ghost {
 }
 
 form {
-	background-color: rgb(8 8 10);
+	background-color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
