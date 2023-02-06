@@ -436,6 +436,9 @@ img {
     width: 90vw;
     cursor: pointer;
   }
+
+  /* For Responsive Navbar  */
+
   .logo-container {
     display: flex;
     justify-content: space-between;
@@ -451,7 +454,7 @@ img {
   .icons {
     display: flex !important;
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 3rem;
     width: 40vw;
     justify-content: inherit;
     transition: 0.7s;
@@ -459,6 +462,9 @@ img {
     opacity: 0;
   }
 }
+
+/* For Responsive Navbar  */
+
 #bar {
   display: none;
 }
