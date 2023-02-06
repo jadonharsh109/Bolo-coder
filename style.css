@@ -376,7 +376,8 @@ img {
   svg {
     position: absolute;
   }
-  .left {
+  .logo {
+    transition: 0.7s;
   }
   .question {
     font-size: 4rem;
@@ -430,4 +431,43 @@ img {
     position: relative;
     top: 2rem;
   }
+  .search-box form:hover,
+  .search-box form:valid {
+    width: 90vw;
+    cursor: pointer;
+  }
+
+  /* For Responsive Navbar  */
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  #bar {
+    font-size: 3rem;
+    align-items: center;
+    display: flex !important;
+    justify-content: end;
+  }
+  .icons {
+    display: flex !important;
+    position: absolute;
+    font-size: 3rem;
+    width: 40vw;
+    justify-content: inherit;
+    transition: 0.7s;
+    margin-left: 1rem;
+    opacity: 0;
+  }
+}
+
+/* For Responsive Navbar  */
+
+#bar {
+  display: none;
+}
+.icons {
+  display: none;
 }
