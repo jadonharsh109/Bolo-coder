@@ -13,6 +13,10 @@ var iconsid = document.getElementById("icons")
 var linkid1 = document.getElementById("link1")
 var linkid2 = document.getElementById("link2")
 var linkid3 = document.getElementById("link3")
+var header = document.getElementById("header")
+var home = document.getElementById("home")
+var svg = document.getElementById("svg")
+var loader = document.getElementById("loader")
 barToggle.addEventListener("click", () => {
     if (barToggleIcon.classList.contains('fa-bars-staggered')) {
 
@@ -34,3 +38,12 @@ barToggle.addEventListener("click", () => {
 
     }
 })
+
+window.setTimeout(() => {
+    header.style.opacity = "1"
+    home.style.opacity = "1"
+    svg.style.opacity = "1"
+    loader.style.display = "none"
+
+}, 3000)
+
