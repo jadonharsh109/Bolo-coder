@@ -30,7 +30,6 @@
       href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,33 +42,40 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Bolo Coder</title>
-  </head>
+    <!-- bootstrap -->
 
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <title>Wanna Talk?</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
   <body>
-    <div class="container" id="loader">
-      <div class="feeder">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
     <header id="header">
       <div class="nav-wrapper">
         <div class="logo-container">
           <h2 class="logo" id="logo">
-            <a href="index.html" class="logo-link">
+            <a href="../../index.html" class="logo-link">
               <span class="first">B</span>olo <span class="last">C</span>oders
             </a>
           </h2>
           <div class="icons" id="icons">
-            <a href="templates/ask.html" id="link1"
+            <a href="../ask.html" id="link1"
               ><i class="fa-solid fa-question"></i>
             </a>
-            <a href="templates/ans.php" id="link2"
+            <a href="../ans.php" id="link2"
               ><i class="fa-solid fa-comments"></i
             ></a>
-            <a href="templates/login.html" id="link3"
+            <a href="../login.html" id="link3"
               ><i class="fa-solid fa-circle-user"></i
             ></a>
           </div>
@@ -80,39 +86,134 @@
         <nav>
           <div class="nav-container">
             <ul class="nav-tabs">
-              <li class="nav-tab"><a href="templates/ask.html">Ask</a></li>
+              <li class="nav-tab"><a href="../ask.html">Ask</a></li>
               <li class="nav-tab">Answer</li>
               <li class="nav-tab">FAQ</li>
               <li class="nav-tab">
-                <a href="templates/contact/contact.html">Contact</a>
+                <a href="../contact.html">Contact</a>
               </li>
-              <li class="nav-tab"><a href="templates/login.html">Login</a></li>
+              <li class="nav-tab"><a href="../login.html">Login</a></li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
-    <div class="home" id="home">
-      <div class="left">
-        <img src="images/home3.png" alt="" />
-      </div>
-      <div class="right">
-        <h1 class="question">Stuck on a error?</h1>
-        <div class="heading">
-          <video src="images/video2.mp4" autoplay loop muted></video>
-          <h2 class="title">BOLO CODER!</h2>
-        </div>
-        <p>Unlimited space for all your coding problems</p>
+    <section id="contact">
+      <h1 class="section-header">Contact</h1>
 
-        <div class="search-box">
-          <form action="">
-            <input type="search" required />
-            <i class="fa fa-search"></i>
-            <a href="javascript:void(0)" id="clear-btn">Clear</a>
-          </form>
+      <div class="contact-wrapper">
+        <!-- Left contact page -->
+
+        <form id="contact-form" class="form-horizontal" role="form">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="NAME"
+                name="name"
+                value=""
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="EMAIL"
+                name="email"
+                value=""
+                required
+              />
+            </div>
+          </div>
+
+          <textarea
+            class="form-control"
+            rows="10"
+            placeholder="MESSAGE"
+            name="message"
+            required
+          ></textarea>
+
+          <button
+            class="btn btn-primary send-button"
+            id="submit"
+            type="submit"
+            value="SEND"
+          >
+            <div class="alt-send-button">
+              <i class="fa fa-paper-plane"></i
+              ><span class="send-text">SEND</span>
+            </div>
+          </button>
+        </form>
+
+        <!-- Left contact page -->
+
+        <div class="direct-contact-container">
+          <ul class="contact-list">
+            <li class="list-item">
+              <i class="fa fa-map-marker fa-2x"
+                ><span class="contact-text place">City, State</span></i
+              >
+            </li>
+
+            <li class="list-item">
+              <i class="fa fa-phone fa-2x"
+                ><span class="contact-text phone"
+                  ><a href="tel:1-212-555-5555" title="Give me a call"
+                    >(212) 555-2368</a
+                  ></span
+                ></i
+              >
+            </li>
+
+            <li class="list-item">
+              <i class="fa fa-envelope fa-2x"
+                ><span class="contact-text gmail"
+                  ><a href="mailto:#" title="Send me an email"
+                    >hitmeup@gmail.com</a
+                  ></span
+                ></i
+              >
+            </li>
+          </ul>
+
+          <!-- <hr />
+          <ul class="social-media-list">
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-github" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-codepen" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+          <hr />
+
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div> -->
         </div>
       </div>
-    </div>
+    </section>
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +287,6 @@
         </use>
       </g>
     </svg>
-
-    <script src="script.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>
