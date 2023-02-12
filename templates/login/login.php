@@ -1,6 +1,6 @@
 
 <?php
-require_once("conn.php");
+require_once("../../config/conn.php");
 
 $username = $password = $email = $confirm_password = "";
 $username_err = $password_err = $email_err = $confirm_password_err = "";
@@ -306,6 +306,22 @@ if(empty($err))
       .content;
     
     ad.appendChild(document.importNode(content, true));
+
+
+
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+
 
       </script>
 </div> 
