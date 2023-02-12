@@ -5,11 +5,11 @@ session_start();
 // check if the user is already logged in
 if(isset($_SESSION['username']))
 {
-    header("location: Confession.php");
+    header("location: ../../index.html");
     exit;
 }
 
-require_once "form.php";
+require_once "../../config/conn.php";
 
 $username = $password = "";
 $err = "";

@@ -1,7 +1,8 @@
 
 
 <?php
-require_once("form.php");
+
+require_once "../../config/conn.php";
 
 $username = $password = $email = $confirm_password = "";
 $username_err = $password_err = $email_err = $confirm_password_err = "";
@@ -145,7 +146,7 @@ mysqli_close($con);
           
           <button type="submit" name="submit" id="submit" class="glow-on-hover" value="send">Submit</button>
 </form>
-          <a class="login-link" href="login.html" >already have a account? Login</a>
+          <a class="login-link" href="login.php" >already have a account? Login</a>
           
           <a class="login-link" >Start you journey with us!</a>
         </div>
