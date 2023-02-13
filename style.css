@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
@@ -375,17 +376,21 @@ img {
   svg {
     position: absolute;
   }
+
   .logo {
     transition: 0.7s;
     font-size: 2.5rem;
   }
+
   .first,
   .last {
     font-size: 3rem !important;
   }
+
   .question {
     font-size: 4rem;
   }
+
   .home {
     display: flex;
     flex-direction: column;
@@ -393,6 +398,7 @@ img {
     margin: 2rem 0;
     padding: 0;
   }
+
   .left,
   .right {
     height: 30vh;
@@ -402,9 +408,11 @@ img {
     align-items: center;
     justify-content: center;
   }
+
   img {
     width: 30rem;
   }
+
   .heading .title {
     width: 100%;
     height: 100%;
@@ -415,6 +423,7 @@ img {
     text-align: center;
     padding: 2rem;
   }
+
   .home p {
     font-family: "Bebas Neue", cursive;
     letter-spacing: 2px;
@@ -422,6 +431,7 @@ img {
     text-align: center;
     top: 0px;
   }
+
   .heading video {
     height: 100%;
     width: 100%;
@@ -431,10 +441,12 @@ img {
     object-fit: cover;
     padding-top: 1rem;
   }
+
   .search-box {
     position: relative;
     top: 2rem;
   }
+
   .search-box form:hover,
   .search-box form:valid {
     width: 90vw;
@@ -449,12 +461,14 @@ img {
     align-items: center;
     width: 100%;
   }
+
   #bar {
     font-size: 2.8rem;
     align-items: center;
     display: flex !important;
     justify-content: end;
   }
+
   .icons {
     display: flex !important;
     position: absolute;
@@ -466,6 +480,7 @@ img {
     opacity: 0;
     align-items: center;
   }
+
   #link1,
   #link2,
   #link3 {
@@ -478,6 +493,7 @@ img {
 #bar {
   display: none;
 }
+
 .icons {
   display: none;
 }
@@ -488,48 +504,57 @@ img {
     -webkit-transform: translateX(-500%);
     transform: translateX(-500%);
   }
+
   30%,
   70% {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   50% {
     -webkit-transform: translateX(0) scale(2.5);
     transform: translateX(0) scale(2.5);
   }
+
   40%,
   60% {
     -webkit-transform: translateX(0) scale(1.5);
     transform: translateX(0) scale(1.5);
   }
+
   100% {
     opacity: 0;
     -webkit-transform: translateX(500%);
     transform: translateX(500%);
   }
 }
+
 @keyframes fed {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-500%);
     transform: translateX(-500%);
   }
+
   30%,
   70% {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   50% {
     -webkit-transform: translateX(0) scale(2.5);
     transform: translateX(0) scale(2.5);
   }
+
   40%,
   60% {
     -webkit-transform: translateX(0) scale(1.5);
     transform: translateX(0) scale(1.5);
   }
+
   100% {
     opacity: 0;
     -webkit-transform: translateX(500%);
@@ -543,11 +568,13 @@ img {
     -webkit-transform: translateX(-500%);
     transform: translateX(-500%);
   }
+
   40% {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     opacity: 0;
     -webkit-transform: translateX(500%);
@@ -561,11 +588,13 @@ img {
     -webkit-transform: translateX(-500%);
     transform: translateX(-500%);
   }
+
   40% {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     opacity: 0;
     -webkit-transform: translateX(500%);
@@ -578,6 +607,7 @@ img {
   position: relative;
   width: 20px;
 }
+
 .feeder div {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
@@ -596,14 +626,17 @@ img {
   width: 100%;
   background-color: white;
 }
+
 .feeder div:nth-child(2),
 .feeder div:nth-child(3) {
   -webkit-animation-name: feed;
   animation-name: feed;
 }
+
 .feeder div:nth-child(2) {
   --delay: 0.25;
 }
+
 .feeder div:nth-child(3) {
   --delay: 0.5;
 }
@@ -613,6 +646,7 @@ header,
 svg {
   opacity: 0;
 }
+
 .container {
   height: 100vh;
   width: 100%;
