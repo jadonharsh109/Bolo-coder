@@ -110,9 +110,48 @@ mysqli_close($con);
     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Q_magazine_logo.svg/2034px-Q_magazine_logo.svg.png">
     <title>Login and Signup Page</title>
 </head>
-<body>
-  
-
+<body style="
+    display: block;
+">
+<!-- NavBar start -->
+<header id="header">
+      <div class="nav-wrapper">
+        <div class="logo-container">
+          <h2 class="logo" id="logo">
+            <a href="../../index.html" class="logo-link">
+              <span class="first">B</span>olo <span class="last">C</span>oders
+            </a>
+          </h2>
+          <div class="icons" id="icons">
+            <a href="templates/ask/ask.php" id="link1"
+              ><i class="fa-solid fa-question"></i>
+            </a>
+            <a href="templates/ans/ans.php" id="link2"
+              ><i class="fa-solid fa-comments"></i
+            ></a>
+            <a href="templates/login/login.php" id="link3"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+          </div>
+          <div id="bar">
+            <i class="fa-solid fa-bars-staggered" id="responsiveBar"></i>
+          </div>
+        </div>
+        <nav>
+          <div class="nav-container">
+            <ul class="nav-tabs">
+              <li class="nav-tab"><a href="templates/ask/ask.php">Ask</a></li>
+              <li class="nav-tab"><a href="templates/ans/ans.php">Answer</a></li>
+              <li class="nav-tab"><a href="templates/FAQ/faq.html">FAQ</a></li>
+              <li class="nav-tab">
+                <a href="templates/contact/contact.php">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+<!-- NavBar end -->
 
     <div class="login">
       <div id="1" class="login-screen">

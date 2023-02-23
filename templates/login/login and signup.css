@@ -303,7 +303,8 @@ footer a {
 	.login-screen {
 	background-color: #FFF;
 	padding: 20px;
-	border-radius: 5px
+	border-radius: 5px;
+	margin-top: 20%; 
 	}
 	
 	.app-title {
@@ -420,6 +421,7 @@ footer a {
   body {
 	background-color: #03001c;
 	font-family: "Poppins", sans-serif;
+	display: block;
   }
   
   /* Default Classes */
@@ -431,21 +433,21 @@ footer a {
   
   .nav-wrapper {
 	display: flex;
-	position: relative;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
-	justify-content: space-between;
-	margin: auto;
-	width: 160vh;
-	height: 80px;
-	border-radius: 50px 50px;
-	padding: 0 25px;
-	z-index: 2;
-	background: #301e67;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-	color: white;
-	margin-top: 8rem;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+    height: 80px;
+    border-radius: 50px 50px;
+    padding: 0 25px;
+    z-index: 2;
+    background: #301e67;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    color: white;
+    margin-top: 1rem;
   }
   
   .logo-container {
