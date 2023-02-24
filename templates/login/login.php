@@ -114,22 +114,22 @@ mysqli_close($con);
     display: block;
 ">
 <!-- NavBar start -->
-<header id="header">
+<header id="headerx">
       <div class="nav-wrapper">
         <div class="logo-container">
-          <h2 class="logo" id="logo">
+          <h2 class="logo" id="logox">
             <a href="../../index.html" class="logo-link">
               <span class="first">B</span>olo <span class="last">C</span>oders
             </a>
           </h2>
-          <div class="icons" id="icons">
-            <a href="templates/ask/ask.php" id="link1"
+          <div class="icons" id="iconsx">
+            <a href="templates/ask/ask.php" id="link1x"
               ><i class="fa-solid fa-question"></i>
             </a>
-            <a href="templates/ans/ans.php" id="link2"
+            <a href="templates/ans/ans.php" id="link2x"
               ><i class="fa-solid fa-comments"></i
             ></a>
-            <a href="templates/login/login.php" id="link3"
+            <a href="templates/login/login.php" id="link3x"
               ><i class="fa-solid fa-circle-user"></i
             ></a>
           </div>

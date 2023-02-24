@@ -1,32 +1,15 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
 
 // added navbar mobile js
-const clearInput = () => {
-    const input = document.getElementsByTagName("input")[0];
-    input.value = "";
-}
-
-const clearBtn = document.getElementById("clear-btn");
-clearBtn.addEventListener("click", clearInput);
+console.log("working")
 
 var barToggle = document.getElementById("bar")
 var barToggleIcon = document.getElementById("responsiveBar")
-var logoid = document.getElementById("logo")
-var iconsid = document.getElementById("icons")
-var linkid1 = document.getElementById("link1")
-var linkid2 = document.getElementById("link2")
-var linkid3 = document.getElementById("link3")
-var header = document.getElementById("header")
+var logoid = document.getElementById("logox")
+var iconsid = document.getElementById("iconsx")
+var linkid1 = document.getElementById("link1x")
+var linkid2 = document.getElementById("link2x")
+var linkid3 = document.getElementById("link3x")
+var header = document.getElementById("headerx")
 var home = document.getElementById("home")
 var svg = document.getElementById("svg")
 var loader = document.getElementById("loader")
@@ -51,12 +34,4 @@ barToggle.addEventListener("click", () => {
 
     }
 })
-
-window.setTimeout(() => {
-    header.style.opacity = "1"
-    home.style.opacity = "1"
-    svg.style.opacity = "1"
-    loader.style.display = "none"
-
-}, 3000)
 
