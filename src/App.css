@@ -1,0 +1,69 @@
+/* Body Css  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+  scrollbar-color: rgb(98 84 243);
+  scrollbar-width: thin;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(24 24 29);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 5px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+
+body {
+  background-color: #03001c;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Default Classes */
+
+.center {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+div{
+  font-size: 3rem;
+}
+
+.loading{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+  
+}

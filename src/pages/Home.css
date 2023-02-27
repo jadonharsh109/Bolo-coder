@@ -1,0 +1,260 @@
+/* Home section */
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 6rem;
+    padding: 0 10rem;
+    font-size: 2rem;
+  }
+  
+  .question {
+    font-size: 9rem;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 5px;
+  }
+  
+  .heading {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    font-family: "Teko", sans-serif;
+  }
+  
+  .heading video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .heading .title {
+    width: 100%;
+    height: 100%;
+    background-color: #03001c;
+    font-size: 8rem;
+    color: white;
+    mix-blend-mode: darken;
+    text-align: center;
+  }
+  
+  .home p {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+    position: relative;
+    top: -10%;
+    font-size: 2rem;
+    
+  }
+  
+  .left,
+  .right {
+    height: 60vh;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right {
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 3rem;
+  }
+  
+  .left {
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      box-shadow: 0 15px 0px rgba(0, 0, 0, 0);
+      transform: translateY(0px);
+    }
+  
+    50% {
+      box-shadow: 0 25px 0px rgba(0, 0, 0, 0.2);
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      box-shadow: 0 5px 0px rgba(0, 0, 0, 0);
+      transform: translateY(0px);
+    }
+  }
+  
+  img {
+    width: 40rem;
+  }
+  
+  /* form css */
+  .search-box {
+    position: relative;
+    top: -1rem;
+  }
+
+  
+  .search-box form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+  }
+  
+  .search-box form input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+  }
+  
+  .search-box form .fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 2.5rem;
+    transition: all 1s;
+  }
+  
+  .search-box form:hover,
+  .search-box form:valid {
+    width: 40rem;
+    cursor: pointer;
+  }
+  
+  .search-box form:hover input,
+  .search-box form:valid input {
+    display: block;
+  }
+  
+  .search-box form:hover .fa,
+  .search-box form:valid .fa {
+    background: #07051a;
+    color: white;
+  }
+  
+  .search-box form a {
+    display: none;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .search-box form:valid a {
+    display: block;
+  }
+  
+  /* Media Query for phone */
+  @media (max-width: 786px) {
+
+    .question {
+      font-size: 4rem;
+    }
+  
+    .home {
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+      margin: 2rem 0;
+      padding: 0;
+      gap: 2rem;
+    }
+  
+    .left,
+    .right {
+      height: 30vh;
+      position: relative;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    img {
+      width: 30rem;
+    }
+  
+    .heading .title {
+      width: 100%;
+      height: 100%;
+      background-color: #03001c;
+      font-size: 5rem;
+      color: white;
+      mix-blend-mode: darken;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .home p {
+      font-family: "Bebas Neue", cursive;
+      letter-spacing: 2px;
+      position: relative;
+      text-align: center;
+      top: 0px;
+      font-size: 2rem;
+    }
+  
+    .heading video {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      padding-top: 1rem;
+    }
+  
+    .search-box {
+      position: relative;
+      top: 2rem;
+    }
+  
+    .search-box form:hover,
+    .search-box form:valid {
+      width: 90vw;
+      cursor: pointer;
+    }}
+
+
+    .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #cc0000;
+      }
