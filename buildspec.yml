@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies"
+      - sudo apt-get update
+      - sudo apt install nodejs -y
+      - sudo apt install npm -y
+    build:
+      commands:
+        - echo "Building dependencies"
+        - npm install
+        - npm run build
+    post_build:
+      commands:
+      - echo "Build has been successfully built"
+
+  artifacts:
+    files: 
+      - 'build/*'
