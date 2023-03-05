@@ -20,15 +20,6 @@ const Header = () => {
               {/* <span className="first">B</span>olo <span className="last">C</span>oders */}
               <img className='logo-img' src={logo} alt="Bolo-Coder"/>
             </NavLink>
-          <div className="icons" id="icons">
-            <NavLink to="/ask"><SiAskubuntu/></NavLink>
-            <NavLink to="/answer"><FaQuestion/></NavLink>
-            <NavLink to="/contact"><IoIosContacts/></NavLink>
-            <NavLink to="/login"><AiFillContacts/></NavLink>
-          </div>
-          <div id="bar">
-            <GoThreeBars id="responsiveBar"/>
-          </div>
         </div>
         <nav>
           <div className="nav-container">

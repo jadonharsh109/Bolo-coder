@@ -3,6 +3,7 @@ import {AiOutlineHome, AiOutlineUser, AiOutlineBook} from "react-icons/ai"
 import {MdOutlineDesignServices} from "react-icons/md"
 import {IoMdContact} from "react-icons/io"
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 const Nav = ()=>{
     const Wrapper = styled.section`
@@ -15,7 +16,7 @@ const Nav = ()=>{
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 2rem;
+    bottom: 5rem;
     display: flex;
     gap: 0.8rem;
     border-radius: 4rem;
@@ -24,11 +25,11 @@ const Nav = ()=>{
 
 nav a{
     background: transparent;
-    padding: 0.9rem;
+    padding: 1.2rem;
     border-radius: 50%;
     display: flex;
     color: var(--color-light);
-    font-size: 1.1rem;
+    font-size: 3rem;
 }
 
 nav a:hover{
@@ -36,8 +37,17 @@ nav a:hover{
 }
 
 nav a.active{
-    background: var(--color-bg);
-    color: var(--color-white);
+    background: #1f1f38;
+    color: #fff;
+}
+
+@media (min-width: 600px) and (max-width: 961px){
+    nav a{
+        padding:2.5rem;
+    }
+    nav{
+        bottom: 4rem;
+    }
 }
     `;
     const [activeNav, setActiveNav] = useState("#")
@@ -45,11 +55,11 @@ nav a.active{
     return(
         <Wrapper>
         <nav>
-            <a href="#" onClick={()=> setActiveNav("#") } className={activeNav === "#" ? "active" : ""}><AiOutlineHome/></a>
-            <a href="#about" onClick={()=> setActiveNav("#about") } className={activeNav === "#about" ? "active" : ""}><AiOutlineUser/></a>
-            <a href="#experience"  onClick={()=> setActiveNav("#experience") } className={activeNav === "#experience" ? "active" : ""}><AiOutlineBook/></a>
-            <a href="#services"  onClick={()=> setActiveNav("#services") } className={activeNav === "#services" ? "active" : ""}><MdOutlineDesignServices/></a>
-            <a href="#contact"  onClick={()=> setActiveNav("#contact") } className={activeNav === "#contact" ? "active" : ""}><IoMdContact/></a>
+            <NavLink to="/" onClick={()=> setActiveNav("/") } className={activeNav === "/" ? "active" : ""}><AiOutlineHome/></NavLink>
+            <NavLink to="/ask" onClick={()=> setActiveNav("#ask") } className={activeNav === "#ask" ? "active" : ""}><AiOutlineUser/></NavLink>
+            <NavLink to="/faq"  onClick={()=> setActiveNav("#faq") } className={activeNav === "#faq" ? "active" : ""}><AiOutlineBook/></NavLink>
+            <NavLink to="/contact"  onClick={()=> setActiveNav("#contact") } className={activeNav === "#contact" ? "active" : ""}><MdOutlineDesignServices/></NavLink>
+            <NavLink to="/login"  onClick={()=> setActiveNav("#login") } className={activeNav === "#login" ? "active" : ""}><IoMdContact/></NavLink>
         </nav>
         </Wrapper>
     )

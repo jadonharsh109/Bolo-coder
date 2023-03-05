@@ -54,6 +54,8 @@ body {
 a {
   color: #eee;
   text-decoration: none;
+  outline: none;
+  border: 0;
 }
 
 div{

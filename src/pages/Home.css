@@ -29,6 +29,7 @@
     top: 0;
     left: 0;
     object-fit: cover;
+    padding: 1.5rem;
   }
   
   .heading .title {
@@ -179,75 +180,7 @@
   }
   
   /* Media Query for phone */
-  @media (max-width: 786px) {
 
-    .question {
-      font-size: 4rem;
-    }
-  
-    .home {
-      display: flex;
-      flex-direction: column;
-      font-size: 2rem;
-      margin: 2rem 0;
-      padding: 0;
-      gap: 2rem;
-    }
-  
-    .left,
-    .right {
-      height: 30vh;
-      position: relative;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    img {
-      width: 30rem;
-    }
-  
-    .heading .title {
-      width: 100%;
-      height: 100%;
-      background-color: #03001c;
-      font-size: 5rem;
-      color: white;
-      mix-blend-mode: darken;
-      text-align: center;
-      padding: 2rem;
-    }
-  
-    .home p {
-      font-family: "Bebas Neue", cursive;
-      letter-spacing: 2px;
-      position: relative;
-      text-align: center;
-      top: 0px;
-      font-size: 2rem;
-    }
-  
-    .heading video {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      padding-top: 1rem;
-    }
-  
-    .search-box {
-      position: relative;
-      top: 2rem;
-    }
-  
-    .search-box form:hover,
-    .search-box form:valid {
-      width: 90vw;
-      cursor: pointer;
-    }}
 
 
     .unselectable {
@@ -258,3 +191,251 @@
         user-select: none;
         color: #cc0000;
       }
+
+
+
+
+@media (max-width:480px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+
+  
+        .question {
+          font-size: 3rem;
+        }
+      
+        .home {
+          display: flex;
+          flex-direction: column;
+          font-size: 2rem;
+          margin: 2rem 0;
+          padding: 0;
+          gap: 2rem;
+          padding: 0 1rem;
+        }
+      
+        .left,
+        .right {
+          height: 30vh;
+          position: relative;
+          z-index: 100;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        img {
+          width: 30rem;
+        }
+      
+        .heading .title {
+          width: 100%;
+          height: 100%;
+          background-color: #03001c;
+          font-size: 5rem;
+          color: white;
+          mix-blend-mode: darken;
+          text-align: center;
+          padding: 2rem;
+        }
+      
+        .home p {
+          font-family: "Bebas Neue", cursive;
+          letter-spacing: 2px;
+          position: relative;
+          text-align: center;
+          top: 0px;
+          font-size: 2rem;
+        }
+      
+        .heading video {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          padding: 1rem;
+        }
+      
+        .search-box {
+          position: relative;
+          top: 2rem;
+        }
+      
+        .search-box form:hover,
+        .search-box form:valid {
+          width: 90vw;
+          cursor: pointer;
+        }
+}
+@media (min-width:480px) and (max-width:600px)  { /* smartphones, Android phones, landscape iPhone */ 
+
+  
+  .question {
+    font-size: 4rem;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .left,
+  .right {
+    height: 30vh;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 30rem;
+  }
+
+  .heading .title {
+    width: 100%;
+    height: 100%;
+    background-color: #03001c;
+    font-size: 5rem;
+    color: white;
+    mix-blend-mode: darken;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .home p {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    top: 0px;
+    font-size: 2rem;
+  }
+
+  .heading video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    padding-top: 1rem;
+  }
+
+  .search-box {
+    position: relative;
+    top: 2rem;
+  }
+
+  .search-box form:hover,
+  .search-box form:valid {
+    width: 90vw;
+    cursor: pointer;
+  }
+}
+
+
+@media (min-width:600px) and (max-width: 961px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+
+  .question {
+    font-size: 5rem;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .left,
+  .right {
+    height: 30vh;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 33rem;
+  }
+
+  .heading .title {
+    width: 100%;
+    height: 100%;
+    background-color: #03001c;
+    font-size: 6.5rem;
+    color: white;
+    mix-blend-mode: darken;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .home p {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    top: 0px;
+    font-size: 2rem;
+  }
+
+  .heading video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    padding-top: 1rem;
+  }
+
+  .search-box {
+    position: relative;
+    top: 2rem;
+  }
+
+  .search-box form:hover,
+  .search-box form:valid {
+    width: 90vw;
+    cursor: pointer;
+  }
+}
+
+@media (min-width:961px) and (max-width:1025px) { 
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  .question {
+    font-size: 6.5rem;
+  }
+  .home {
+ padding: 0 5rem;
+}
+.heading video {
+
+  padding: 1.5rem;
+}
+
+}
+
+@media (min-width:1025px) and (max-width:1300px){
+  /* big landscape tablets, laptops, and desktops */ 
+  .question {
+    font-size: 6.5rem;
+  }
+  .home {
+ padding: 0 5rem;
+}
+.heading video {
+
+  padding: 1.5rem;
+}
+}
