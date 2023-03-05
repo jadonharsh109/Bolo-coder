@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
-
+import Nav from './pages/Nav';
 import Home from './pages/Home';
 import Ask from './pages/Ask';
 import Answer from './pages/Answer';
@@ -11,24 +11,47 @@ import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import { useState, useEffect } from'react';
 import RingLoader from'react-spinners/RingLoader';
-const App =()=>{
+const App = () => {
   const [loading, setLoading] = useState(true)
-useEffect(()=>{
-  setLoading(true)
-  setTimeout(()=>{
-    setLoading(false)
-  }, 8000)
-},[])
-  return (
-    loading ?     <div className='loading'>
-<RingLoader
-    color="#fff"
-    size={100}
-    className="loading"
-  />
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 5000)
+  }, [])
 
-    </div>  : <BrowserRouter>
-  <Header />
+  const [dimensions, setDimensions] = useState({ 
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+  useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+
+}
+
+    window.addEventListener('resize', handleResize)
+
+    return _ => {
+      window.removeEventListener('resize', handleResize)
+
+}
+  })
+
+  return (
+    loading ? <div className='loading'>
+      <RingLoader
+        color="#fff"
+        size={100}
+        className="loading"
+      />
+
+    </div> : <BrowserRouter>
+
+      {dimensions.width <=786 ? <Nav/> : <Header/>}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ask" element={<Ask />} />
