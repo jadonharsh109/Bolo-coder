@@ -5,16 +5,23 @@
 
 
 A Unlimited Place to ask coding problems and answer coding problems to help others. This is a project inspired by StackOverflow with a modern design and loads of new features.
-Being Developed by Team of 3 Developers.
-
-<center>
-  
-  
-![zyro-image(1)](https://user-images.githubusercontent.com/85556603/221118256-1d7ae964-3a9e-4cdd-a677-c68e3b6160e4.png)
+<br>
+Being Developed by Team of 4 Developers.
 
 
-</center>
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/85556603/223820992-1d2f3dca-deb6-40f7-8088-7d6750761ecb.png" alt= “” width="250px" height="250px" >
+</p>
+<p align="center">
+<a href="https://wakatime.com/badge/user/ea9792e5-799b-44a2-a25f-c28679dbaa38/project/86537adb-ae7b-4c9e-8f2c-030dc0714236"><img src="https://wakatime.com/badge/user/ea9792e5-799b-44a2-a25f-c28679dbaa38/project/86537adb-ae7b-4c9e-8f2c-030dc0714236.svg?style=for-the-badge" alt="wakatime" 0 height="20px"></a>
+<a href="https://hits.dwyl.com/jadonharsh109/Bolo-coder"><img src="https://hits.dwyl.com/jadonharsh109/Bolo-coder.svg?style=for-the-badge" alt="HitCount"  height="20px"></a>
+<a href="https://github.com/jadonharsh109/Bolo-coder/">
+  <img src="https://badgen.net/github/branches/jadonharsh109/Bolo-coder" alt="GitHub branches"  height="20px">
+</a>
+<a href="https://GitHub.com/jadonharsh109/Bolo-coder/commit/">
+  <img src="https://badgen.net/github/commits/jadonharsh109/Bolo-coder?style=for-the-badge" alt="GitHub commits" height="20px">
+</a>
+  </p>
 <h1>Working Materials</h1>
 <h2>Languages used</h2>
 
