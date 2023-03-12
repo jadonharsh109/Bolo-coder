@@ -1,0 +1,36 @@
+.contact-page-css {
+    padding: 0 0 5rem 0;
+    text-align: center;
+}
+
+.container {
+    margin-top: 6rem;
+}
+
+.contact-form {
+    max-width: 50rem;
+    margin: auto;
+}
+
+.contact-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-inputs input[type="submit"] {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.contact-inputs input[type="submit"]:hover {
+    background-color: #fff;
+    border: 1px solid rgb(255, 255, 255);
+    color: red;
+    transform: scale(0.9);
+}
+
+.contact-inputs input,
+textarea {
+    padding: 1rem;
+}
