@@ -1,6 +1,11 @@
 const app = require('./App');
-const port = 5000;
+const dotenv = require('dotenv');
 
+
+dotenv.config({path: './config.env'});
+const port = process.env.PORT || 8000;
+
+console.log(process.env)
 app.listen(port, () => {
-    console.log('Server Started...')
+    console.log('Vagita: It is Over',port );
 })
