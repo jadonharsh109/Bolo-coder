@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   scrollbar-color: rgb(98 84 243);
   scrollbar-width: thin;
   color: white;
@@ -58,7 +58,7 @@ a {
   border: 0;
 }
 
-div{
+div {
   font-size: 3rem;
 }
 
@@ -69,26 +69,31 @@ div{
   text-transform: capitalize;
 }
 
-.loading{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-  
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
 }
+
 .grid {
   display: grid;
   gap: 9rem;
 }
+
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
 }
+
 .grid-three-column {
   grid-template-columns: repeat(3, 1fr);
 }
-.grid-four-column{
-   grid-template-columns: 1fr 1.2fr .5fr .8fr ;
+
+.grid-four-column {
+  grid-template-columns: 1fr 1.2fr .5fr .8fr;
 }
-.grid-five-column{
+
+.grid-five-column {
   grid-template-columns: repeat(5, 1fr);
 }

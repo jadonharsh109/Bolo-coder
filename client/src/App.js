@@ -9,18 +9,18 @@ import FAQ from './pages/FAQ';
 import Login from './pages/Login';
 import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
-import { useState, useEffect } from'react';
-import RingLoader from'react-spinners/RingLoader';
+import { useState, useEffect } from 'react';
+import RingLoader from 'react-spinners/RingLoader';
 const App = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 4000)
   }, [])
 
-  const [dimensions, setDimensions] = useState({ 
+  const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth
   })
@@ -31,14 +31,14 @@ const App = () => {
         width: window.innerWidth
       })
 
-}
+    }
 
     window.addEventListener('resize', handleResize)
 
     return _ => {
       window.removeEventListener('resize', handleResize)
 
-}
+    }
   })
 
   return (
@@ -51,19 +51,19 @@ const App = () => {
 
     </div> : <BrowserRouter>
 
-      {dimensions.width <=786 ? <Nav/> : <Header/>}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ask" element={<Ask />} />
-          <Route path="/answer" element={<Answer />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-  </BrowserRouter>
-  
-  
+      {dimensions.width <= 786 ? <Nav /> : <Header />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ask" element={<Ask />} />
+        <Route path="/answer" element={<Answer />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
+
+
 
   );
 }
