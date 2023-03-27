@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import { useState, useEffect } from 'react';
 import RingLoader from 'react-spinners/RingLoader';
+import Signup from './pages/Signup';
 const App = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -59,7 +60,10 @@ const App = () => {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<ErrorPage />} />
+
+
       </Routes>
     </BrowserRouter>
 

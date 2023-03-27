@@ -1,47 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import svg from "../images/undraw_remotely_2j6y.svg";
+import svg from "../images/undraw_work_time_re_hdyv.svg";
 import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   const Wrapper = styled.section`
-    .login {
+    .signup {
       margin-top: 3rem;
       height: 85vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      .svg-login {
+      .svg-signup {
         display: flex;
         justify-content: center;
+
+        img {
+          width: 50rem;
+        }
       }
 
-      .login-form form {
+      .signup-form form {
         height: fit-content;
         background-color: transparent;
         width: 80%;
         display: flex;
         flex-direction: column;
+        margin: auto;
       }
-      .login-form hr {
+      .signup-form hr {
         width: 100%;
         margin: 2rem 0 0 0;
       }
-      .login-form form h3 {
+      .signup-form form h3 {
         text-align: center;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         margin: 1rem 0;
       }
-      .login-para {
+      .signup-para {
         font-weight: 100;
         font-size: 1.8rem;
         margin: 1rem 0;
         text-align: center;
       }
-      .login-form form input[type="password"],
-      input[type="email"] {
+      .signup-form form input[type="password"],
+      input[type="email"],
+      input[type="text"] {
         padding: 2rem 1rem;
         background: #edf2f5;
         border: 0;
@@ -50,13 +55,18 @@ const Login = () => {
         font-size: 2rem;
         color: grey;
       }
+      .signup-form form input::placeholder {
+        color: black;
+        opacity: 0.6;
+        font-size: 1.8rem;
+      }
       .top-border {
         border-radius: 1rem 1rem 0 0;
       }
       .down-border {
         border-radius: 0 0 1rem 1rem;
       }
-      .login-form form button {
+      .signup-form form button {
         border-radius: 0.5rem;
         background: #301e67;
         color: #fff;
@@ -68,12 +78,12 @@ const Login = () => {
         outline: none;
         border: 0;
       }
-      .login-form form button:hover {
+      .signup-form form button:hover {
         background-color: #623cb5;
         transition: 0.5s;
       }
 
-      .login-link-icon ul {
+      .signup-link-icon ul {
         display: flex;
         color: white;
         list-style: none;
@@ -87,43 +97,27 @@ const Login = () => {
           cursor: pointer;
         }
       }
-      .signup-forget {
-        display: flex;
-        font-size: 2rem;
-        justify-content: space-between;
-        padding: 1rem 0;
-
-        div {
-          font-size: 2rem;
-        }
-      }
     }
     @media (max-width: 786px) {
       margin-top: 5rem;
-      .login {
+      .signup {
         height: 100vh;
 
         grid-template-columns: 1fr;
         width: 90%;
         margin: auto;
-        .svg-login {
+        .svg-signup {
           display: none;
         }
-        .login-form form {
+        .signup-form form {
           width: 100%;
         }
-        .login-para {
+        .signup-para {
           font-size: 2rem;
           margin: 2rem 0;
         }
-        .login-form form button {
+        .signup-form form button {
           margin: 2.5rem 0;
-        }
-
-        .signup-forget {
-          div {
-            font-size: 1.5rem;
-          }
         }
       }
     }
@@ -131,42 +125,32 @@ const Login = () => {
 
   return (
     <Wrapper>
-      <div className="login">
-        <div className="svg-login">
-          <img src={svg} alt="Svg Logo" />
-        </div>
+      <div className="signup">
         <div className="">
-          <div className="login-form">
+          <div className="signup-form">
             <form action="">
-              <h3>Sign In</h3>
-              <p className="login-para">
-                Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
-                consectetur adipisicing.
+              <h3>Haven't Registered?</h3>
+              <p className="signup-para">
+                Signup to join the community of Bolocoder developers and show
+                off your abilities and work.
               </p>
               <input
-                type="email"
+                type="text"
                 className="top-border"
-                placeholder="Username"
+                placeholder="Enter Your Name"
                 required
               />
+              <input type="email" placeholder="Enter your Email" required />
               <input
                 type="password"
                 className="down-border"
-                placeholder="Password"
+                placeholder="Enter Your Password"
                 required
               />
-              <div className="signup-forget">
-                <div className="signup-redirect">
-                  <NavLink to="/signup">Haven't Registered?</NavLink>
-                </div>
-                <div className="forget-password">
-                  <a href="/">Forget Password?</a>
-                </div>
-              </div>
-              <button type="submit">Log In</button>
+              <button type="submit">Sign Up</button>
               <hr />
-              <p className="login-para">Or Login With</p>
-              <div className="login-link-icon">
+              <p className="signup-para">Or signup With</p>
+              <div className="signup-link-icon">
                 <ul>
                   <li>
                     <a href="https://github.com/jadonharsh109/Bolo-coder">
@@ -190,9 +174,12 @@ const Login = () => {
             </form>
           </div>
         </div>
+        <div className="svg-signup">
+          <img src={svg} alt="Svg Logo" />
+        </div>
       </div>
     </Wrapper>
   );
 };
 
-export default Login;
+export default Signup;
