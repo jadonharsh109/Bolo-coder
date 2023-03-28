@@ -26,7 +26,7 @@ const Signup = () => {
         });
         alert("Successfully Signed In");
         setValue({ email: "", pass: "", name: "" });
-        Navigate("/");
+        Navigate("/profile");
       })
       .catch((err) => alert(err.message));
   };

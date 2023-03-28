@@ -4,8 +4,30 @@ import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./LoginSignup.css";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/Firebase";
+import { useState } from "react";
+import { signInWithEmailAndPassword } from "@firebase/auth";
 
 const Login = () => {
+  const [value, setValue] = useState({
+    email: "",
+    pass: "",
+  });
+
+  const Navigate = useNavigate();
+
+  const HandleSubmit = () => {
+    console.log(value);
+    signInWithEmailAndPassword(auth, value.email, value.pass)
+      .then((res) => {
+        alert("Successfully Signed In");
+        setValue({ email: "", pass: "" });
+        Navigate("/profile");
+      })
+      .catch((err) => alert(err.message));
+  };
+
   return (
     <section>
       <div className="login">
@@ -22,14 +44,21 @@ const Login = () => {
               </p>
               <input
                 type="email"
-                className="top-border"
-                placeholder="Username"
+                placeholder="Enter your Email"
+                value={value.email}
+                onChange={(event) =>
+                  setValue({ ...value, email: event.target.value })
+                }
                 required
               />
               <input
                 type="password"
                 className="down-border"
-                placeholder="Password"
+                placeholder="Enter Your Password"
+                value={value.pass}
+                onChange={(event) =>
+                  setValue({ ...value, pass: event.target.value })
+                }
                 required
               />
               <div className="signup-forget">
@@ -40,7 +69,7 @@ const Login = () => {
                   <a href="/">Forget Password?</a>
                 </div>
               </div>
-              <button type="submit">Log In</button>
+              <button onClick={HandleSubmit}>Log In</button>
               <hr />
               <p className="login-para">Or Login With</p>
               <div className="login-link-icon">

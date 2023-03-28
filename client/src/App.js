@@ -12,6 +12,8 @@ import ErrorPage from './pages/ErrorPage';
 import { useState, useEffect } from 'react';
 import RingLoader from 'react-spinners/RingLoader';
 import Signup from './pages/Signup';
+import { auth } from './firebase/Firebase';
+import Profile from './pages/Profile';
 const App = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -19,6 +21,20 @@ const App = () => {
     setTimeout(() => {
       setLoading(false)
     }, 3500)
+  }, [])
+
+  const [UserName, setUserName] = useState("")
+  const [loginStatus, setLoginStatus] = useState("Login")
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserName(user.displayName)
+        setLoginStatus("Logout")
+      } else {
+        setUserName("Login")
+
+      }
+    })
   }, [])
 
   const [dimensions, setDimensions] = useState({
@@ -52,7 +68,7 @@ const App = () => {
 
     </div> : <BrowserRouter>
 
-      {dimensions.width <= 786 ? <Nav /> : <Header />}
+      {dimensions.width <= 786 ? <Nav LoginStatus={loginStatus} /> : <Header LoginStatus={loginStatus} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ask" element={<Ask />} />
@@ -62,6 +78,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/profile" element={<Profile name={UserName} />} />
 
 
       </Routes>
