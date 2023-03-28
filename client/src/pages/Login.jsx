@@ -8,26 +8,32 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase/Firebase";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "@firebase/auth";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  GithubAuthProvider,
+} from "firebase/auth";
 
 const Login = () => {
-  const provider = new GoogleAuthProvider();
+  const Navigate = useNavigate();
 
-  const handleSignIn = () => {
+  // Google Login
+
+  const provider = new GoogleAuthProvider();
+  const handleSignInGoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         Navigate("/profile");
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => alert(error.message));
   };
+
+  // Signin with Email and Password
 
   const [value, setValue] = useState({
     email: "",
     pass: "",
   });
-
-  const Navigate = useNavigate();
-
   const HandleSubmit = () => {
     console.log(value);
     signInWithEmailAndPassword(auth, value.email, value.pass)
@@ -37,6 +43,17 @@ const Login = () => {
         Navigate("/profile");
       })
       .catch((err) => alert(err.message));
+  };
+
+  // GitHub Login
+
+  const GitHubprovider = new GithubAuthProvider();
+  const handleSignInGitHub = () => {
+    signInWithPopup(auth, GitHubprovider)
+      .then((result) => {
+        Navigate("/profile");
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (
@@ -86,18 +103,12 @@ const Login = () => {
               <div className="login-link-icon">
                 <ul>
                   <li>
-                    <a href="https://github.com/jadonharsh109/Bolo-coder">
+                    <a href="javascript:void(0)" onClick={handleSignInGitHub}>
                       <AiFillGithub />{" "}
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/jadonharsh109/Bolo-coder">
-                      {" "}
-                      <FaLinkedin />{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)" onClick={handleSignIn}>
+                    <a href="javascript:void(0)" onClick={handleSignInGoogle}>
                       {" "}
                       <AiFillGoogleCircle />{" "}
                     </a>
