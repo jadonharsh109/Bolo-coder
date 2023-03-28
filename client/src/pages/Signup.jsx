@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import svg from "../images/undraw_work_time_re_hdyv.svg";
 import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
@@ -123,6 +123,22 @@ const Signup = () => {
     }
   `;
 
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    pass: "",
+  });
+
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+
+    setUserData({ ...userData, [name]: value });
+  };
+
+  console.log(userData);
+
   return (
     <Wrapper>
       <div className="signup">
@@ -138,13 +154,26 @@ const Signup = () => {
                 type="text"
                 className="top-border"
                 placeholder="Enter Your Name"
+                name="name"
+                value={userData.name}
+                onChange={postUserData}
                 required
               />
-              <input type="email" placeholder="Enter your Email" required />
+              <input
+                type="email"
+                placeholder="Enter your Email"
+                name="email"
+                value={userData.email}
+                onChange={postUserData}
+                required
+              />
               <input
                 type="password"
                 className="down-border"
                 placeholder="Enter Your Password"
+                name="pass"
+                value={userData.pass}
+                onChange={postUserData}
                 required
               />
               <button type="submit">Sign Up</button>
