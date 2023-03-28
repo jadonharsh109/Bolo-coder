@@ -4,10 +4,21 @@ import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import "./LoginSignup.css";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../firebase/Firebase";
+import { auth, app } from "../firebase/Firebase";
 import { useNavigate } from "react-router";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Signup = () => {
+  const provider = new GoogleAuthProvider();
+
+  const handleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        Navigate("/profile");
+      })
+      .catch((error) => console.log(error.message));
+  };
+
   const [value, setValue] = useState({
     name: "",
     email: "",
@@ -88,7 +99,7 @@ const Signup = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/jadonharsh109/Bolo-coder">
+                    <a href="javascript:void(0)" onClick={handleSignIn}>
                       {" "}
                       <AiFillGoogleCircle />{" "}
                     </a>

@@ -8,8 +8,19 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase/Firebase";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "@firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
+  const provider = new GoogleAuthProvider();
+
+  const handleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        Navigate("/profile");
+      })
+      .catch((error) => console.log(error.message));
+  };
+
   const [value, setValue] = useState({
     email: "",
     pass: "",
@@ -86,7 +97,7 @@ const Login = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/jadonharsh109/Bolo-coder">
+                    <a href="javascript:void(0)" onClick={handleSignIn}>
                       {" "}
                       <AiFillGoogleCircle />{" "}
                     </a>
